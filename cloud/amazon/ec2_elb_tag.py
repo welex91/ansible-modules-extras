@@ -116,8 +116,8 @@ def main():
     # get the current list of tags from the ELB
     current_tags = connection.get_list('DescribeTags', params,
                                        [('member', Tag)])
-    tagdict = {tag.Key : tag.Value for tag in current_tags
-               if hasattr(tag, 'Key')}
+    tagdict = dict((tag.Key, tag.Value) for tag in current_tags
+                   if hasattr(tag, 'Key'))
 
     if state == 'list' :
         module.exit_json(changed=False, tags=tagdict)
