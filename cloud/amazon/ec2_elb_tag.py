@@ -62,10 +62,12 @@ tasks:
 
 RETURN = '''
 tags:
-    description: hash of tags
-    returned:  when state == list
-    type: dictionary
-    sample: "tags": { "Tier": "Frontend", "Stack": "Production"}
+  description: hash of tags
+  returned:  when state == list
+  type: dictionary
+  sample:
+    Tier: "Frontend"
+    Stack: "Production"
 '''
 
 try:
