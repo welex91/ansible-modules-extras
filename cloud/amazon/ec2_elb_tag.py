@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#!/usr/bin/python
 # This file is part of Ansible
 #
 # Ansible is free software: you can redistribute it and/or modify
@@ -21,7 +21,7 @@ short_description: Tag Amazon ELB.
 description:
   - Add tags for an EC2 Elastic Load Balancers in AWS.
   - Will be marked changed when called only if state is changed.
-version_added: "2.0"
+version_added: "2.1"
 author: "Sumit Roy (@welex91)"
 options:
   name:
