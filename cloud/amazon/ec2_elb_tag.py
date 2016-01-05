@@ -60,6 +60,14 @@ tasks:
     state: present
 '''
 
+RETURN = '''
+tags:
+    description: hash of tags
+    returned:  when state == list
+    type: dictionary
+    sample: "tags": { "Tier": "Frontend", "Stack": "Production"}
+'''
+
 try:
     import boto
     import boto.ec2.elb
